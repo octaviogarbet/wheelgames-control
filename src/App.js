@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer';
+import Wheel from './components/wheel';
 
 function App() {
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +22,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <Wheel letters={letters}/>
+      <Footer/>
     </div>
   );
 }
