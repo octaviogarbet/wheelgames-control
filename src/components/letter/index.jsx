@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import './letter.scss';
 
 class Letter extends Component {
   render() {
-    return <li><div className={this.props.status}><h1>{this.props.letter}</h1></div></li>;
+    return <li><div className={this.props.status}><span className="wheel-item">{this.props.letter}</span></div></li>;
   }
 }
 
