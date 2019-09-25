@@ -53,12 +53,15 @@
     }
     &.correct {
       border: solid 5px green;
+      filter: grayscale(0);
     }
     &.wrong {
       border: solid 5px red;
+      filter: grayscale(0);
+    }
+    &.initial {
+      border: solid 5px blueviolet;
     }
   }
-  &.initial {
-    border: solid 5px blueviolet;
-  }
+  
 }

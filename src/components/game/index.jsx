@@ -17,37 +17,54 @@ class Game extends Component {
     };
   }
 
+  findByStateFrom = (items, state, index) => {
+    let nextIndex = -1;
+    for(var i = index; i < items.length; i++) {
+      if(items[i].state === state) {
+        nextIndex = i;
+        break;
+      }
+    }
+    return nextIndex
+  }
+
   goToNext = () => {
     let index = this.state.activeIndex + 1;
-    let nextIndex = this.state.items.indexOf((item => item.state === 'initial'), index);
+    let nextIndex = this.findByStateFrom(this.state.items, 'initial', index);
     if (nextIndex >= 0) {
       this.setState({activeIndex: nextIndex});
     } else {
-      nextIndex = this.state.items.indexOf((item => item.state === 'initial'));
+      nextIndex = this.findByStateFrom(this.state.items, 'initial', 0);
       if (nextIndex >= 0) {
         this.setState({activeIndex: nextIndex});
       } 
     }
   }
 
+  updateCurrentItemState = (state) => {
+    const newItems = [...this.state.items];
+    const item = {
+      ...newItems[this.state.activeIndex],
+      state: state
+    }
+    newItems[this.state.activeIndex] = item;
+    this.setState({ items: newItems });
+  }
+
   handleCorrect = () => {
-    this.setState({
-      items: this.state.items[this.state.activeIndex].state = 'correct'
-    });
+    this.updateCurrentItemState('correct');
     this.goToNext();
   }
 
   handleWrong = () => {
-    this.setState({
-      items: this.state.items[this.state.activeIndex].state = 'wrong'
-    });
+    this.updateCurrentItemState('wrong');
     this.goToNext();
   }
 
   handleSkip = () => {
     this.goToNext();
     this.setState({
-      running: !this.state.running
+      running: false
     });
   }
 
@@ -64,7 +81,8 @@ class Game extends Component {
           <Wheel letters={this.state.items} active={this.letters[this.state.activeIndex]}/>        
         </div>
         <div className="game-pad">
-          <Control running={this.state.running} onPlayStopChange={this.handlePlayStopChange}/>
+          <Control running={this.state.running} onPlayStopChange={this.handlePlayStopChange}
+           onSkip={this.handleSkip} onCorrect={this.handleCorrect} onWrong={this.handleWrong}/>
           <Timer running={this.state.running}/>
         </div>
       </main>
