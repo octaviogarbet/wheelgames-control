@@ -2,20 +2,27 @@ import React, { Component } from 'react'
 import './timer.scss';
 
 class Timer extends Component {
+  running = false;
   constructor(props) {
     super(props);
     this.state = {minutes: '02', seconds: '00'};
   }
 
-  componentDidMount() {
+  startTimer = () => {
     this.timerID = setInterval(
       () => this.tick(),
       1000
     );
+    this.running = true;
+  }
+
+  stopTimer = () => {
+    clearInterval(this.timerID);
+    this.running = false;
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    this.stopTimer();
   }
 
   tick() {
@@ -40,6 +47,11 @@ class Timer extends Component {
   }
 
   render() {
+    if (this.props.running && !this.running) {
+      this.startTimer();
+    } else if (!this.props.running && this.running) {
+      this.stopTimer();
+    }
     return (
       <div className="timer">
         <span>{this.state.minutes} : {this.state.seconds}</span>
