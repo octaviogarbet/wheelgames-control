@@ -6,8 +6,8 @@ class Wheel extends Component {
   render() {
     const letters = this.props.letters;
     const listItems = letters.map((letter) =>
-      <Letter key={letter.toString()}
-                letter={letter} status='initial'/>
+      <Letter key={letter.label.toString()}
+                letter={letter.label} status={letter.status} isActive={letter.label === this.props.active}/>
 
     );
     return (

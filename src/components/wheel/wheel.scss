@@ -19,7 +19,7 @@
     margin: -($item-size / 2);
   
     $angle: (360 / $item-count);
-    $rot: 0;
+    $rot: 270;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
@@ -37,19 +37,25 @@
 .circle-container {
   @include on-circle($item-count: 26, $circle-size: 30em, $item-size: 3em); 
   margin: 5em auto 0;
-  border: solid 5px tomato;
+  border: solid 5px lightgrey;
   
   div { 
     display: block; 
     max-width: 100%; 
     border-radius: 50%;
-    filter: grayscale(100%);
-    border: solid 5px tomato;
+    border: solid 5px blue;
     transition: .15s;
+    filter: grayscale(70%);
     
-    &:hover,
-    &:active {
+    // &:hover,
+    &.active {
       filter: grayscale(0);
+    }
+    &.correct {
+      border: solid 5px green;
+    }
+    &.wrong {
+      border: solid 5px red;
     }
   }
   &.initial {
