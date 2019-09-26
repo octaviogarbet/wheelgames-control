@@ -46,6 +46,40 @@ class Timer extends Component {
     });
   }
 
+  addMinute = () => {
+    let minutes = +this.state.minutes + 1
+    minutes = minutes >= 10 ? minutes + '' : '0' + minutes;
+    this.setState({ minutes: minutes });
+  }
+
+  addSeconds = () => {
+    let seconds = +this.state.seconds + 10
+    if (seconds >= 60) {
+      seconds = seconds - 60;
+      this.addMinute();
+    }
+    seconds = seconds >= 10 ? seconds + '' : '0' + seconds;
+    this.setState({ seconds: seconds });
+  }
+
+  removeMinute = () => {
+    let minutes = +this.state.minutes - 1
+    if (minutes >= 0) {
+      minutes = minutes >= 10 ? minutes + '' : '0' + minutes;
+      this.setState({ minutes: minutes });
+    }
+  }
+
+  removeSeconds = () => {
+    let seconds = +this.state.seconds - 10
+    if (seconds < 0) {
+      seconds = seconds + 60;
+      this.removeMinute();
+    }
+    seconds = seconds >= 10 ? seconds + '' : '0' + seconds;
+    this.setState({ seconds: seconds });
+  }
+
   render() {
     if (this.props.running && !this.running) {
       this.startTimer();
@@ -54,7 +88,17 @@ class Timer extends Component {
     }
     return (
       <div className="timer">
-        <span>{this.state.minutes} : {this.state.seconds}</span>
+        <div className="controls">
+          <button className="moreTime" onClick={this.addMinute}>+1</button>
+          <button className="moreTime" onClick={this.addSeconds}>+1</button>
+        </div>
+        <div className="clock">
+          <span>{this.state.minutes} : {this.state.seconds}</span>
+        </div>
+        <div className="controls">
+          <button className="lessTime" onClick={this.removeMinute}>-1</button>
+          <button className="lessTime" onClick={this.removeSeconds}>-1</button>
+        </div>
       </div>
     );
   }
