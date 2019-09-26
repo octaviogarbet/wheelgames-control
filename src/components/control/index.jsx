@@ -26,10 +26,10 @@ class Control extends Component {
   render() {
     return (
       <div className="control-pannel">
-        <button className="skip" onClick={this.handleSkip}>Skip</button>
-        <button className="correct" onClick={this.handleCorrect}>Correct</button>
-        <button className="wrong" onClick={this.handleWrong}>Wrong</button>
-        <button className="stop-play" onClick={this.handlePlayStop}>{this.props.running ? "Stop" : "Play" }</button>
+        <button className="skip" disabled={!this.props.hasTime} onClick={this.handleSkip}>Skip</button>
+        <button className="correct" disabled={!this.props.hasTime} onClick={this.handleCorrect}>Correct</button>
+        <button className="wrong" disabled={!this.props.hasTime} onClick={this.handleWrong}>Wrong</button>
+        <button className="stop-play" disabled={!this.props.hasTime} onClick={this.handlePlayStop}>{this.props.running ? "Stop" : "Play" }</button>
         <button className="reset" onClick={this.handleReset}>Reset</button>
       </div>
     );

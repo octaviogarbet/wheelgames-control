@@ -31,6 +31,7 @@ class Timer extends Component {
     if (this.state.seconds === '00') {
       if (this.state.minutes === '00') {
         clearInterval(this.timerID);
+        this.props.onHasTimeChange(false);
       } else {
         seconds = '59'
         minutes = +this.state.minutes - 1
@@ -47,12 +48,14 @@ class Timer extends Component {
   }
 
   addMinute = () => {
+    this.props.onHasTimeChange(true);
     let minutes = +this.state.minutes + 1
     minutes = minutes >= 10 ? minutes + '' : '0' + minutes;
     this.setState({ minutes: minutes });
   }
 
   addSeconds = () => {
+    this.props.onHasTimeChange(true);
     let seconds = +this.state.seconds + 10
     if (seconds >= 60) {
       seconds = seconds - 60;
@@ -93,7 +96,7 @@ class Timer extends Component {
           <button className="moreTime" onClick={this.addSeconds}>+1</button>
         </div>
         <div className="clock">
-          <span>{this.state.minutes} : {this.state.seconds}</span>
+          <span className={this.props.hasTime ? "has-time" : "time-expired"}>{this.state.minutes} : {this.state.seconds}</span>
         </div>
         <div className="controls">
           <button className="lessTime" onClick={this.removeMinute}>-1</button>

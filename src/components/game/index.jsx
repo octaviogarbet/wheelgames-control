@@ -13,7 +13,8 @@ class Game extends Component {
     this.state = {
       running: false,
       activeIndex: 0,
-      items: this.initialList
+      items: this.initialList,
+      hasTime: true
     };
   }
 
@@ -82,6 +83,12 @@ class Game extends Component {
     });
   }
 
+  handleHasTimeChange = (hasTime) => {
+    this.setState({
+      hasTime: hasTime
+    });
+  }
+
   render() {
     return (
       <main className="container">
@@ -90,8 +97,8 @@ class Game extends Component {
         </div>
         <div className="game-pad">
           <Control running={this.state.running} onPlayStopChange={this.handlePlayStopChange} onReset={this.initWheel}
-           onSkip={this.handleSkip} onCorrect={this.handleCorrect} onWrong={this.handleWrong}/>
-          <Timer running={this.state.running}/>
+           onSkip={this.handleSkip} onCorrect={this.handleCorrect} onWrong={this.handleWrong} hasTime={this.state.hasTime}/>
+          <Timer running={this.state.running} onHasTimeChange={this.handleHasTimeChange} hasTime={this.state.hasTime}/>
         </div>
       </main>
     );
