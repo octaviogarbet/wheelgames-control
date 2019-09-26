@@ -1,4 +1,10 @@
 header {
   min-height: 15vh;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading {
+  flex-grow: 0.5;
 }

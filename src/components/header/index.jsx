@@ -1,5 +1,5 @@
-
 import React, { Component } from 'react'
+import './header.scss';
 
 class Header extends Component {
   handleChange = (event) => {
@@ -9,7 +9,7 @@ class Header extends Component {
   render() {
     const teams = this.props.teams;
     const scores = teams.map((team) =>
-      <div className="result-line"><span className="team-name">{team.name}</span> | <span className="score-correct">{team.correct}</span> | <span className="score-wrong">{team.wrong}</span></div>
+      <div className="result-line" key={team.name}><span className="team-name">{team.name}</span> | <span className="score-correct">{team.correct}</span> | <span className="score-wrong">{team.wrong}</span></div>
     );
     return (
     <header>
