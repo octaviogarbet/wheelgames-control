@@ -19,6 +19,10 @@ class Control extends Component {
     this.props.onWrong();
   }
 
+  handleReset = () => {
+    this.props.onReset();
+  }
+
   render() {
     return (
       <div className="control-pannel">
@@ -26,6 +30,7 @@ class Control extends Component {
         <button className="correct" onClick={this.handleCorrect}>Correct</button>
         <button className="wrong" onClick={this.handleWrong}>Wrong</button>
         <button className="stop-play" onClick={this.handlePlayStop}>{this.props.running ? "Stop" : "Play" }</button>
+        <button className="reset" onClick={this.handleReset}>Reset</button>
       </div>
     );
   }

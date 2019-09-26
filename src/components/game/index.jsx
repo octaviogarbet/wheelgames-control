@@ -6,15 +6,23 @@ import './game.scss';
 
 class Game extends Component {
   letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
+  initialList;
   constructor(props) {
     super(props);
-    const listItems = this.letters.map((letter) => ({label: letter, state: 'initial'}));
+    this.initialList = this.letters.map((letter) => ({label: letter, state: 'initial'}));
     this.state = {
       running: false,
       activeIndex: 0,
-      items: listItems
+      items: this.initialList
     };
+  }
+
+  initWheel = () => {
+    this.setState({
+      running: false,
+      activeIndex: 0,
+      items: this.initialList
+    });
   }
 
   findByStateFrom = (items, state, index) => {
@@ -81,7 +89,7 @@ class Game extends Component {
           <Wheel letters={this.state.items} active={this.letters[this.state.activeIndex]}/>        
         </div>
         <div className="game-pad">
-          <Control running={this.state.running} onPlayStopChange={this.handlePlayStopChange}
+          <Control running={this.state.running} onPlayStopChange={this.handlePlayStopChange} onReset={this.initWheel}
            onSkip={this.handleSkip} onCorrect={this.handleCorrect} onWrong={this.handleWrong}/>
           <Timer running={this.state.running}/>
         </div>
