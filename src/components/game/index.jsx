@@ -91,7 +91,7 @@ class Game extends Component {
 
   render() {
     return (
-      <main className="container">
+      <main className={"container " + this.props.className}>
         <div className="wheel-container">
           <Wheel letters={this.state.items} active={this.letters[this.state.activeIndex]}/>        
         </div>
