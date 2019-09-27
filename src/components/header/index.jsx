@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './header.scss';
+import { TextField } from '@material-ui/core';
 
 class Header extends Component {
   handleChange = (event) => {
@@ -13,7 +14,7 @@ class Header extends Component {
         <h1>{this.props.label}</h1>
       </div>
       <div className="options">
-        <input type="number" value={this.props.totalTeams} onChange={this.handleChange} name="teams" id="teams" min="1" max="4" step="1"/>
+         <TextField type="number" label="Teams (1 to 4)" value={this.props.totalTeams} onChange={this.handleChange} name="teams" id="teams" min="1" max="4" step="1"/>
       </div>
     </header>
     );

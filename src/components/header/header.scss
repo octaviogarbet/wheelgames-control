@@ -2,13 +2,13 @@ header {
   min-height: 15vh;
   display: flex;
   justify-content: space-around;
-  background-color: #9E9E9E;
+  background-color: var(--color-header);
   align-items: center;
 }
 
 .heading {
   flex-grow: 0.5;
   h1 {
-    color: navy;
+    color: var(--color-primary);
   }
 }

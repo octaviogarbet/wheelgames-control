@@ -44,25 +44,25 @@
     max-width: 100%; 
     border-radius: 50%;
     transition: .15s;
-    background-color: blueviolet;
-    border: solid 5px blueviolet;
+    background-color: var(--color-initial);
+    border: solid 5px var(--color-initial);
     
     // &:hover,
     &.initial {
       filter: grayscale(70%);
     }
     &.active {
-      border: solid 5px blue;
-      background-color: blue;
+      border: solid 5px var(--color-active);
+      background-color: var(--color-active);
       filter: grayscale(0);
     }
     &.correct {
-      border: solid 5px green;
-      background-color: green;
+      border: solid 5px var(--color-correct);
+      background-color: var(--color-correct);
     }
     &.wrong {
-      border: solid 5px red;
-      background-color: red;
+      border: solid 5px var(--color-wrong);
+      background-color: var(--color-wrong);
     }
   }
   

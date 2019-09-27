@@ -1,3 +1,17 @@
+:root {
+  --color-primary: #ff8A5B;
+  --color-primary-light: #ffAA7B;
+  --color-primary-dark: #ff6A3B;
+  --color-secondary: #8db48e;
+  --color-background: #25ced1;
+  --color-container: #f4f4f4;
+  --color-header: white;
+  --color-correct: green;
+  --color-wrong: red;
+  --color-initial: blueviolet;
+  --color-active: blue;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +19,7 @@
 
 body {
   margin: 0;
-  background-color: green;
+  background-color: var(--color-background);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -13,6 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   align-items: center;
   min-height: 100vh;
+  color: var(--color-secondary);
 }
 
 code {

@@ -3,6 +3,23 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  max-width: 13rem;
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 
   .play {
     border: 0;

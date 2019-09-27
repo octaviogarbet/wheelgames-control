@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import './control.scss';
+import icons from './../../assets/sprite.svg';
 
 class Control extends Component {
   handlePlayStop = () => {
@@ -24,13 +25,14 @@ class Control extends Component {
   }
 
   render() {
+    const playStop = this.props.running ? <svg><use xlinkHref={`${icons}#icon-pause`} /></svg> : <svg><use xlinkHref={`${icons}#icon-play`} /></svg>
     return (
       <div className="control-pannel">
-        <button className="skip" disabled={!this.props.hasTime} onClick={this.handleSkip}>Skip</button>
-        <button className="correct" disabled={!this.props.hasTime} onClick={this.handleCorrect}>Correct</button>
-        <button className="wrong" disabled={!this.props.hasTime} onClick={this.handleWrong}>Wrong</button>
-        <button className={this.props.running ? "stop" : "play" } disabled={!this.props.hasTime} onClick={this.handlePlayStop}></button>
-        <button className="reset" onClick={this.handleReset}>Reset</button>
+        <button className="button" disabled={!this.props.hasTime} onClick={this.handleSkip}><svg><use xlinkHref={`${icons}#icon-notification`} /></svg></button>
+        <button className="button" disabled={!this.props.hasTime} onClick={this.handleCorrect}><svg><use xlinkHref={`${icons}#icon-checkmark`} /></svg></button>
+        <button className="button" disabled={!this.props.hasTime} onClick={this.handleWrong}><svg><use xlinkHref={`${icons}#icon-cross`} /></svg></button>
+        <button className="button" disabled={!this.props.hasTime} onClick={this.handlePlayStop}>{playStop}</button>
+        <button className="button" onClick={this.handleReset}><svg><use xlinkHref={`${icons}#icon-reset`} /></svg></button>
       </div>
     );
   }
