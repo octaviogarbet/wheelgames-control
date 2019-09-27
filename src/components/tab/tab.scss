@@ -1,14 +1,11 @@
 .tab {
   cursor: pointer;
-  background-color: darkkhaki;
-  border: 2px solid khaki;
-  border-radius: 5%;
-  box-shadow: 3px, 3px;
+  background-color: #9E9E9E;
   width: 100%;
   height: 100%;
-  margin: 10px;
   &.selected {
-    background-color: khaki;
-    border: 4px solid darkkhaki;
+    background-color: #9e9e9e73;
+    border-bottom: 1px solid #9e9e9e;
+    color: #fff;
   }
 }

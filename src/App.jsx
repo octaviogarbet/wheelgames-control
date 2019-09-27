@@ -74,7 +74,7 @@ class App extends Component {
 
   render() {
     const tabs = this.state.teams.map((team) => 
-      <Tab key={team.name} team={team} onHandleClick={this.handleTabChange} className={(team.name !== this.state.selectedTeam) ? "selected" : "" }/>
+      <Tab key={team.name} team={team} onHandleClick={this.handleTabChange} className={(team.name === this.state.selectedTeam) ? "selected" : "" }/>
     );
     const content = this.state.teams.map((team) => 
       <Game team={team.name} key={team.name} className={(team.name !== this.state.selectedTeam) ? "hidden" : "" }
