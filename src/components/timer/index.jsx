@@ -92,15 +92,15 @@ class Timer extends Component {
     return (
       <div className="timer">
         <div className="controls">
-          <button className="moreTime" onClick={this.addMinute}>+1</button>
-          <button className="moreTime" onClick={this.addSeconds}>+1</button>
+          <i className="arrow up" onClick={this.addMinute}></i>
+          <i className="arrow up" onClick={this.addSeconds}></i>
         </div>
         <div className="clock">
           <span className={this.props.hasTime ? "has-time" : "time-expired"}>{this.state.minutes} : {this.state.seconds}</span>
         </div>
         <div className="controls">
-          <button className="lessTime" onClick={this.removeMinute}>-1</button>
-          <button className="lessTime" onClick={this.removeSeconds}>-1</button>
+          <i className="arrow down" onClick={this.removeMinute}></i>
+          <i className="arrow down" onClick={this.removeSeconds}></i>
         </div>
       </div>
     );

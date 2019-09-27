@@ -29,7 +29,7 @@ class Control extends Component {
         <button className="skip" disabled={!this.props.hasTime} onClick={this.handleSkip}>Skip</button>
         <button className="correct" disabled={!this.props.hasTime} onClick={this.handleCorrect}>Correct</button>
         <button className="wrong" disabled={!this.props.hasTime} onClick={this.handleWrong}>Wrong</button>
-        <button className="stop-play" disabled={!this.props.hasTime} onClick={this.handlePlayStop}>{this.props.running ? "Stop" : "Play" }</button>
+        <button className={this.props.running ? "stop" : "play" } disabled={!this.props.hasTime} onClick={this.handlePlayStop}></button>
         <button className="reset" onClick={this.handleReset}>Reset</button>
       </div>
     );

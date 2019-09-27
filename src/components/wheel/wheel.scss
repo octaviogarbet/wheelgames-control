@@ -35,32 +35,34 @@
 }
 
 .circle-container {
-  @include on-circle($item-count: 26, $circle-size: 30em, $item-size: 3em); 
-  margin: 5em auto 0;
-  border: solid 5px lightgrey;
+  @include on-circle($item-count: 26, $circle-size: 25em, $item-size: 2.5em); 
+  margin: 2em auto 0;
+  //border: solid 5px lightgrey;
   
   div { 
     display: block; 
     max-width: 100%; 
     border-radius: 50%;
-    border: solid 5px blue;
     transition: .15s;
-    filter: grayscale(70%);
+    background-color: blueviolet;
+    border: solid 5px blueviolet;
     
     // &:hover,
+    &.initial {
+      filter: grayscale(70%);
+    }
     &.active {
+      border: solid 5px blue;
+      background-color: blue;
       filter: grayscale(0);
     }
     &.correct {
       border: solid 5px green;
-      filter: grayscale(0);
+      background-color: green;
     }
     &.wrong {
       border: solid 5px red;
-      filter: grayscale(0);
-    }
-    &.initial {
-      border: solid 5px blueviolet;
+      background-color: red;
     }
   }
   

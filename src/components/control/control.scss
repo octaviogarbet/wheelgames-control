@@ -1,4 +1,34 @@
 .control-pannel {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .play {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 54px;
+  
+    border-color: transparent transparent transparent green;
+    cursor: pointer;
+  
+    // play state
+    border-style: solid;
+    border-width: 27px 0 27px 40px;
+  }
+
+  .stop {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 54px;
+    height: 54px;
+  
+    border-color: yellow;
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+    cursor: pointer;
+  }
 }
