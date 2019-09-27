@@ -41,12 +41,44 @@ class App extends Component {
     });
   }
 
+  handleReset = (teamName) => {
+    const newTeams = [...this.state.teams];
+    const team = newTeams.find(t => t.name === teamName);
+    team.correct = 0;
+    team.wrong = 0;
+    this.setState({
+      teams: newTeams
+    });
+  }
+
+  handleCorrect = (teamName) => {
+    this.handleScore(teamName, true);
+  }
+
+  handleWrong = (teamName) => {
+    this.handleScore(teamName, false);
+  }
+
+  handleScore = (teamName, addCorrect) => {
+    const newTeams = [...this.state.teams];
+    const team = newTeams.find(t => t.name === teamName);
+    if (addCorrect) {
+      team.correct++;
+    } else {
+      team.wrong++;
+    }
+    this.setState({
+      teams: newTeams
+    });
+  }
+
   render() {
     const tabs = this.state.teams.map((team) => 
-      <Tab key={team.name} team={team.name} onHandleClick={this.handleTabChange}/>
+      <Tab key={team.name} team={team} onHandleClick={this.handleTabChange}/>
     );
     const content = this.state.teams.map((team) => 
-      <Game team={team.name} key={team.name} className={(team.name !== this.state.selectedTeam) ? "hidden" : "" }/>
+      <Game team={team.name} key={team.name} className={(team.name !== this.state.selectedTeam) ? "hidden" : "" }
+      onHandleCorrect={this.handleCorrect} onHandleWrong={this.handleWrong} onHandleReset={this.handleReset}/>
     );
     return (
       <div className="App">

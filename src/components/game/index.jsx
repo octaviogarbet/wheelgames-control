@@ -24,6 +24,7 @@ class Game extends Component {
       activeIndex: 0,
       items: this.initialList
     });
+    this.props.onHandleReset(this.props.team);
   }
 
   findByStateFrom = (items, state, index) => {
@@ -62,11 +63,13 @@ class Game extends Component {
 
   handleCorrect = () => {
     this.updateCurrentItemState('correct');
+    this.props.onHandleCorrect(this.props.team);
     this.goToNext();
   }
 
   handleWrong = () => {
     this.updateCurrentItemState('wrong');
+    this.props.onHandleWrong(this.props.team);
     this.goToNext();
   }
 

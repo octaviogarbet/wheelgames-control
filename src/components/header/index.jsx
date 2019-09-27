@@ -7,10 +7,6 @@ class Header extends Component {
   }
 
   render() {
-    const teams = this.props.teams;
-    const scores = teams.map((team) =>
-      <div className="result-line" key={team.name}><span className="team-name">{team.name}</span> | <span className="score-correct">{team.correct}</span> | <span className="score-wrong">{team.wrong}</span></div>
-    );
     return (
     <header>
       <div className="heading">
@@ -18,9 +14,6 @@ class Header extends Component {
       </div>
       <div className="options">
         <input type="number" value={this.props.totalTeams} onChange={this.handleChange} name="teams" id="teams" min="1" max="4" step="1"/>
-      </div>
-      <div className="score">
-        {scores}
       </div>
     </header>
     );
