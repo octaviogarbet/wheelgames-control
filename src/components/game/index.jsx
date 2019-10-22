@@ -71,6 +71,9 @@ class Game extends Component {
     this.updateCurrentItemState('wrong');
     this.props.onHandleWrong(this.props.team);
     this.goToNext();
+    this.setState({
+      running: false
+    });
   }
 
   handleSkip = () => {
