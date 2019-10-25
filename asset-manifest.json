@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wheelgames-control/static/css/main.56ee27a3.chunk.css",
+    "main.js": "/wheelgames-control/static/js/main.e4ddee40.chunk.js",
+    "main.js.map": "/wheelgames-control/static/js/main.e4ddee40.chunk.js.map",
+    "runtime-main.js": "/wheelgames-control/static/js/runtime-main.53d097ce.js",
+    "runtime-main.js.map": "/wheelgames-control/static/js/runtime-main.53d097ce.js.map",
+    "static/js/2.396cbddb.chunk.js": "/wheelgames-control/static/js/2.396cbddb.chunk.js",
+    "static/js/2.396cbddb.chunk.js.map": "/wheelgames-control/static/js/2.396cbddb.chunk.js.map",
+    "index.html": "/wheelgames-control/index.html",
+    "precache-manifest.c9d94cf0647885c6c264842a820488f0.js": "/wheelgames-control/precache-manifest.c9d94cf0647885c6c264842a820488f0.js",
+    "service-worker.js": "/wheelgames-control/service-worker.js",
+    "static/css/main.56ee27a3.chunk.css.map": "/wheelgames-control/static/css/main.56ee27a3.chunk.css.map",
+    "static/media/sprite.svg": "/wheelgames-control/static/media/sprite.14ed98e2.svg"
+  }
+}
