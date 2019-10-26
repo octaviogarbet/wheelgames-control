@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wheelgames-control/precache-manifest.c9d94cf0647885c6c264842a820488f0.js"
+  "/wheelgames-control/precache-manifest.3d556bc231b8abe96e6c8d82bdb7e02e.js"
 );
 
 self.addEventListener('message', (event) => {
