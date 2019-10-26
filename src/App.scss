@@ -5,11 +5,21 @@
   background-color: var(--color-container);
   min-height: 100vh;
   box-shadow: 0 2rem 6rem;
-  margin: 0px 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tabs {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 50px;
 }
