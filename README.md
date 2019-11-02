@@ -1,5 +1,5 @@
 ## Wheel Games Control
-This web application made in React will allow you to play wheel games like Pass The Word, you just have to run the app, create your questions and play the game with your friends.
+This web application made in React will allow you to play wheel games like Pass The Word, you just have to run the app, create your questions and play the game with your friends. [Try it!](https://oti.noroofdevelopment.com/wheelgames-control/)
 
 ## Features
 
@@ -8,6 +8,7 @@ This web application made in React will allow you to play wheel games like Pass 
 - Controls (Play, Pause, Reset, Correct, Wrong, Pass the word)
 - Scores
 
+## About the code
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
