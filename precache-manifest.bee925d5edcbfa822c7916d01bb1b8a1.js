@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75bbb4712a88a8975328c061ea4d0167",
+    "revision": "2696383460eae9728f557630b8f42a04",
     "url": "/wheelgames-control/index.html"
   },
   {
-    "revision": "9f5dccfabe4b6db1b6b1",
+    "revision": "294b5cf6ebb62132c6cf",
     "url": "/wheelgames-control/static/css/main.840cf469.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wheelgames-control/static/js/2.396cbddb.chunk.js"
   },
   {
-    "revision": "9f5dccfabe4b6db1b6b1",
-    "url": "/wheelgames-control/static/js/main.ef141d47.chunk.js"
+    "revision": "294b5cf6ebb62132c6cf",
+    "url": "/wheelgames-control/static/js/main.864bd7d0.chunk.js"
   },
   {
     "revision": "93835998092ee9459df7",
