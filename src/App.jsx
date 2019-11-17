@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       totalTeams: 2,
-      teams: [{name: "Team 1", correct: 0, wrong: 0}],
+      teams: [{name: "Team 1", correct: 0, wrong: 0}, {name: "Team 2", correct: 0, wrong: 0}],
       selectedTeam: "Team 1"
     };
   }
