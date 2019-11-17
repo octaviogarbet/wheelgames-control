@@ -84,9 +84,10 @@ class Timer extends Component {
   }
 
   render() {
-    if (this.props.running && !this.running) {
+    const {running, hasTime} = this.props;
+    if (running && !this.running) {
       this.startTimer();
-    } else if (!this.props.running && this.running) {
+    } else if (!running && this.running) {
       this.stopTimer();
     }
     return (
@@ -96,7 +97,7 @@ class Timer extends Component {
           <i className="arrow up" onClick={this.addSeconds}></i>
         </div>
         <div className="clock">
-          <span className={this.props.hasTime ? "has-time" : "time-expired"}>{this.state.minutes} : {this.state.seconds}</span>
+          <span className={hasTime ? "has-time" : "time-expired"}>{this.state.minutes} : {this.state.seconds}</span>
         </div>
         <div className="controls">
           <i className="arrow down" onClick={this.removeMinute}></i>

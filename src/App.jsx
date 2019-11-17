@@ -82,7 +82,7 @@ class App extends Component {
     );
     return (
       <div className="App">
-        <Header label="It's time to play" teams={this.state.teams} totalTeams={this.state.totalTeams} onTeamsChange={this.handleTeamsChange}/>
+        <Header label="Homemade Alphabetical" teams={this.state.teams} totalTeams={this.state.totalTeams} onTeamsChange={this.handleTeamsChange}/>
         <div className="tabs">
           {tabs}
         </div>

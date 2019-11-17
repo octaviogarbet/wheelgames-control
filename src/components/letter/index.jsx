@@ -3,7 +3,8 @@ import './letter.scss';
 
 class Letter extends Component {
   render() {
-    return <li><div className={this.props.isActive ? "active "+this.props.status : this.props.status}><span className="wheel-item">{this.props.letter}</span></div></li>;
+    const {isActive, status, letter} = this.props
+    return <li><div className={isActive ? "active "+status : status}><span className="wheel-item">{letter}</span></div></li>;
   }
 }
 

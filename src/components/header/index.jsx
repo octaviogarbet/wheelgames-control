@@ -8,13 +8,14 @@ class Header extends Component {
   }
 
   render() {
+    const {label, totalTeams} = this.props;
     return (
     <header>
       <div className="heading">
-        <h1>{this.props.label}</h1>
+        <h1>{label}</h1>
       </div>
       <div className="options">
-         <TextField type="number" label="Teams (1 to 4)" value={this.props.totalTeams} onChange={this.handleChange} name="teams" id="teams" min="1" max="4" step="1"/>
+         <TextField type="number" label="Teams (1 to 4)" value={totalTeams} onChange={this.handleChange} name="teams" id="teams" min="1" max="4" step="1"/>
       </div>
     </header>
     );

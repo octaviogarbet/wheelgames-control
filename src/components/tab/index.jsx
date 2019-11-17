@@ -7,9 +7,10 @@ class Tab extends Component {
   }
 
   render() {
+    const {className, team} = this.props;
     return (
-    <div className={"tab " +this.props.className} onClick={this.handleClick}>
-      <span className="team-name">{this.props.team.name}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="score-correct">{this.props.team.correct}</span>&nbsp;&nbsp;<span className="score-wrong">{this.props.team.wrong}</span>
+    <div className={"tab " + className} onClick={this.handleClick}>
+      <span className="team-name">{team.name}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="score-correct">{team.correct}</span>&nbsp;&nbsp;<span className="score-wrong">{team.wrong}</span>
     </div>
     );
   }
