@@ -4,8 +4,8 @@ This web application made in React will allow you to play wheel games like Alpha
 ## Features
 
 - Multiplayer (1 to 4)
-- Clock (Init time editable) 
-- Controls (Play, Pause, Reset, Correct, Wrong, Pass the word)
+- Clock (Initial time editable) 
+- Controls (Play, Pause, Reset, Correct, Wrong, Alphabetical)
 - Scores
 
 ## About the code
