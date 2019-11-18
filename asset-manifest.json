@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/wheelgames-control/static/css/main.840cf469.chunk.css",
-    "main.js": "/wheelgames-control/static/js/main.864bd7d0.chunk.js",
-    "main.js.map": "/wheelgames-control/static/js/main.864bd7d0.chunk.js.map",
+    "main.css": "/wheelgames-control/static/css/main.6868df81.chunk.css",
+    "main.js": "/wheelgames-control/static/js/main.ff41177d.chunk.js",
+    "main.js.map": "/wheelgames-control/static/js/main.ff41177d.chunk.js.map",
     "runtime-main.js": "/wheelgames-control/static/js/runtime-main.53d097ce.js",
     "runtime-main.js.map": "/wheelgames-control/static/js/runtime-main.53d097ce.js.map",
     "static/js/2.396cbddb.chunk.js": "/wheelgames-control/static/js/2.396cbddb.chunk.js",
     "static/js/2.396cbddb.chunk.js.map": "/wheelgames-control/static/js/2.396cbddb.chunk.js.map",
     "index.html": "/wheelgames-control/index.html",
-    "precache-manifest.bee925d5edcbfa822c7916d01bb1b8a1.js": "/wheelgames-control/precache-manifest.bee925d5edcbfa822c7916d01bb1b8a1.js",
+    "precache-manifest.f6cfbffdc6933308836ef76c5d6a8ef2.js": "/wheelgames-control/precache-manifest.f6cfbffdc6933308836ef76c5d6a8ef2.js",
     "service-worker.js": "/wheelgames-control/service-worker.js",
-    "static/css/main.840cf469.chunk.css.map": "/wheelgames-control/static/css/main.840cf469.chunk.css.map",
+    "static/css/main.6868df81.chunk.css.map": "/wheelgames-control/static/css/main.6868df81.chunk.css.map",
     "static/media/sprite.svg": "/wheelgames-control/static/media/sprite.14ed98e2.svg"
   }
 }
