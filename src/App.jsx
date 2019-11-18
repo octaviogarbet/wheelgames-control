@@ -26,8 +26,13 @@ class App extends Component {
     }
 
     while (totalTeams < currentTotalTeams) {
-      newTeams.pop();
+      const removedTeam = newTeams.pop();
       currentTotalTeams--;
+      if (removedTeam.name === this.state.selectedTeam) {
+        this.setState({
+          selectedTeam: 'Team 1'
+        });
+      }
     }
     this.setState({
       teams: newTeams,
