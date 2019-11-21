@@ -38,6 +38,17 @@ class Game extends Component {
     return nextIndex
   }
 
+  findByLetterFrom = (items, letter, index) => {
+    let nextIndex = -1;
+    for(var i = index; i < items.length; i++) {
+      if(items[i].label === letter) {
+        nextIndex = i;
+        break;
+      }
+    }
+    return nextIndex
+  }
+
   goToNext = () => {
     let index = this.state.activeIndex + 1;
     let nextIndex = this.findByStateFrom(this.state.items, 'initial', index);
@@ -76,6 +87,26 @@ class Game extends Component {
     });
   }
 
+  handleUndo = (letter) => {
+    const index = this.findByLetterFrom(this.state.items, letter, 0);
+    const newItems = [...this.state.items];
+    if (newItems[index].state === 'correct') {
+      this.props.onHandleUndoCorrect(this.props.team);
+    } else if (newItems[index].state === 'wrong') {
+      this.props.onHandleUndoWrong(this.props.team);
+    }
+    const item = {
+      ...newItems[index],
+      state: 'initial'
+    }
+    newItems[index] = item;
+    this.setState({
+      running: false,
+      activeIndex: index,
+      items: newItems
+    });
+  }
+
   handleSkip = () => {
     this.goToNext();
     this.setState({
@@ -99,7 +130,7 @@ class Game extends Component {
     return (
       <main className={"container " + this.props.className}>
         <div className="wheel-container">
-          <Wheel letters={this.state.items} active={this.letters[this.state.activeIndex]}/>        
+          <Wheel letters={this.state.items} handleClick={this.handleUndo} active={this.letters[this.state.activeIndex]}/>        
         </div>
         <div className="game-pad">
           <Control running={this.state.running} onPlayStopChange={this.handlePlayStopChange} onReset={this.initWheel}

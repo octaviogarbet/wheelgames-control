@@ -57,20 +57,28 @@ class App extends Component {
   }
 
   handleCorrect = (teamName) => {
-    this.handleScore(teamName, true);
+    this.handleScore(teamName, true, 1);
   }
 
   handleWrong = (teamName) => {
-    this.handleScore(teamName, false);
+    this.handleScore(teamName, false, 1);
   }
 
-  handleScore = (teamName, addCorrect) => {
+  handleUndoCorrect = (teamName) => {
+    this.handleScore(teamName, true, -1);
+  }
+
+  handleUndoWrong = (teamName) => {
+    this.handleScore(teamName, false, -1);
+  }
+
+  handleScore = (teamName, addCorrect, sum) => {
     const newTeams = [...this.state.teams];
     const team = newTeams.find(t => t.name === teamName);
     if (addCorrect) {
-      team.correct++;
+      team.correct = team.correct + sum;
     } else {
-      team.wrong++;
+      team.wrong = team.wrong + sum;
     }
     this.setState({
       teams: newTeams
@@ -83,7 +91,8 @@ class App extends Component {
     );
     const content = this.state.teams.map((team) => 
       <Game team={team.name} key={team.name} className={(team.name !== this.state.selectedTeam) ? "hidden" : "" }
-      onHandleCorrect={this.handleCorrect} onHandleWrong={this.handleWrong} onHandleReset={this.handleReset}/>
+      onHandleCorrect={this.handleCorrect} onHandleWrong={this.handleWrong}
+      onHandleUndoCorrect={this.handleUndoCorrect} onHandleUndoWrong={this.handleUndoWrong} onHandleReset={this.handleReset}/>
     );
     return (
       <div className="App">
