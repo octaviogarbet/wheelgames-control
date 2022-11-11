@@ -61,7 +61,23 @@
     }
     &.active {
       background: linear-gradient(#28cff3, #067be8);
+      animation: glow 0.8s ease infinite;
     }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px 0px rgb(48, 203, 250);
+      }
+
+      50% {
+        box-shadow: 0 0 10px 5px rgb(48, 203, 250);
+      }
+
+      100% {
+        box-shadow: 0 0 5px 0px rgb(48, 203, 250);
+      }
+    }
+
     &.correct {
       background: linear-gradient(#48bd5b, #1c712e);
     }

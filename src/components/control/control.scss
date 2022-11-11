@@ -25,15 +25,80 @@
       text-shadow: 0 2px 1px #b9751b;
       font-weight: bold;
       height: 98px;
+      &:hover {
+        animation: glow1 0.5s ease infinite;
+      }
+      @keyframes glow1 {
+        0% {
+          box-shadow: 0 0 4px 0 #ffe600;
+        }
+
+        50% {
+          box-shadow: 0 0 10px 0 #ffe600;
+        }
+
+        100% {
+          box-shadow: 0 0 4px 0 #ffe600;
+        }
+      }
     }
+
     &.correct {
       background: linear-gradient(#48bd5b, #1f8235);
+      &:hover {
+        animation: glow2 0.5s ease infinite;
+      }
+      @keyframes glow2 {
+        0% {
+          box-shadow: 0 0 4px 0 #64ffa4;
+        }
+
+        50% {
+          box-shadow: 0 0 10px 0 #64ffa4;
+        }
+
+        100% {
+          box-shadow: 0 0 4px 0 #64ffa4;
+        }
+      }
     }
     &.wrong {
       background: linear-gradient(#f0404a, #be2121);
+      &:hover {
+        animation: glow3 0.5s ease infinite;
+      }
+      @keyframes glow3 {
+        0% {
+          box-shadow: 0 0 4px 2px #ff8181;
+        }
+
+        50% {
+          box-shadow: 0 0 10px 2px#ff8181;
+        }
+
+        100% {
+          box-shadow: 0 0 4px 2px #ff8181;
+        }
+      }
     }
     &.action {
       background: linear-gradient(#3da6f1, #2b79ee);
+      &:hover {
+        animation: glow4 0.5s ease infinite;
+        @keyframes glow4 {
+          0% {
+            box-shadow: 0 0 4px 2px #81ecff;
+          }
+
+          50% {
+            box-shadow: 0 0 10px 2px#81ecff;
+          }
+
+          100% {
+            box-shadow: 0 0 4px 2px #81ecff;
+          }
+        }
+      }
     }
 
     svg {
