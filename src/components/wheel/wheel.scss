@@ -3,29 +3,28 @@
 /// @param {Length} $item-size - Single item size
 @mixin on-circle($item-count, $circle-size, $item-size) {
   position: relative;
-  width:  $circle-size;
+  width: $circle-size;
   height: $circle-size;
   padding: 0;
-  border-radius: 50%; 
-  list-style: none;       
-  
+  border-radius: 50%;
+  list-style: none;
+
   > * {
     display: block;
     position: absolute;
-    top:  50%; 
+    top: 50%;
     left: 50%;
-    width:  $item-size;
+    width: $item-size;
     height: $item-size;
     margin: -($item-size / 2);
-  
+
     $angle: (360 / $item-count);
     $rot: 270;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
-        transform: 
-          rotate($rot * 1deg) 
-          translate($circle-size / 2) 
+        transform: rotate($rot * 1deg)
+          translate($circle-size / 2)
           rotate($rot * -1deg);
       }
 
@@ -33,37 +32,41 @@
     }
   }
 }
-
+.circle-area {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  padding: 20px 60px;
+  width: 100%;
+  background-position: center;
+  background-size: 99%;
+}
 .circle-container {
-  @include on-circle($item-count: 26, $circle-size: 25em, $item-size: 2.5em); 
-  margin: 2em auto 0;
-  //border: solid 5px lightgrey;
-  
-  div { 
-    display: block; 
-    max-width: 100%; 
+  @include on-circle($item-count: 26, $circle-size: 25em, $item-size: 2.5em);
+  padding: 50px;
+  margin: 0 auto;
+
+  div {
+    display: block;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
-    transition: .15s;
+    transition: 0.15s;
     background-color: var(--color-initial);
-    border: solid 5px var(--color-initial);
-    
+    border: solid 2px white;
+    box-shadow: 0px 0px 14px -3px #000;
+
     // &:hover,
     &.initial {
-      filter: grayscale(70%);
+      background: linear-gradient(#2879f3, #12348d);
     }
     &.active {
-      border: solid 5px var(--color-active);
-      background-color: var(--color-active);
-      filter: grayscale(0);
+      background: linear-gradient(#28cff3, #067be8);
     }
     &.correct {
-      border: solid 5px var(--color-correct);
-      background-color: var(--color-correct);
+      background: linear-gradient(#48bd5b, #1c712e);
     }
     &.wrong {
-      border: solid 5px var(--color-wrong);
-      background-color: var(--color-wrong);
+      background: linear-gradient(#ec3f49, #a92c2c);
     }
   }
-  
 }

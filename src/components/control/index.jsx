@@ -29,11 +29,11 @@ class Control extends Component {
     const playStop = running ? <svg><use xlinkHref={`${icons}#icon-pause`} /></svg> : <svg><use xlinkHref={`${icons}#icon-play`} /></svg>
     return (
       <div className="control-pannel">
-        <button title="Word Pass" className="button" disabled={!hasTime} onClick={this.handleSkip}><svg><use xlinkHref={`${icons}#icon-notification`} /></svg></button>
-        <button title="Correct" className="button" disabled={!hasTime} onClick={this.handleCorrect}><svg><use xlinkHref={`${icons}#icon-checkmark`} /></svg></button>
-        <button title="Wrong" className="button" disabled={!hasTime} onClick={this.handleWrong}><svg><use xlinkHref={`${icons}#icon-cross`} /></svg></button>
-        <button className="button" disabled={!hasTime} onClick={this.handlePlayStop}>{playStop}</button>
-        <button title="Reset" className="button" onClick={this.handleReset}><svg><use xlinkHref={`${icons}#icon-reset`} /></svg></button>
+        <button title="Word Pass" className="button pasapalabra" disabled={!hasTime} onClick={this.handleSkip}>PASAPALABRA</button>
+        <button title="Correct" className="button correct" disabled={!hasTime} onClick={this.handleCorrect}><svg><use xlinkHref={`${icons}#icon-checkmark`} /></svg></button>
+        <button title="Wrong" className="button wrong" disabled={!hasTime} onClick={this.handleWrong}><svg><use xlinkHref={`${icons}#icon-cross`} /></svg></button>
+        <button className="button action"  disabled={!hasTime} onClick={this.handlePlayStop}>{playStop}</button>
+        <button title="Reset" className="button action" onClick={this.handleReset}><svg><use xlinkHref={`${icons}#icon-reset`} /></svg></button>
       </div>
     );
   }

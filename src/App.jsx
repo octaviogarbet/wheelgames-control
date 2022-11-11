@@ -4,6 +4,7 @@ import Footer from './components/footer';
 import Game from './components/game';
 import Header from './components/header';
 import Tab from './components/tab';
+import bg from './assets/bg.png'
 
 class App extends Component {
   constructor(props) {
@@ -95,15 +96,17 @@ class App extends Component {
       onHandleUndoCorrect={this.handleUndoCorrect} onHandleUndoWrong={this.handleUndoWrong} onHandleReset={this.handleReset}/>
     );
     return (
-      <div className="App">
-        <Header label="Homemade Alphabetical" teams={this.state.teams} totalTeams={this.state.totalTeams} onTeamsChange={this.handleTeamsChange}/>
-        <div className="tabs">
-          {tabs}
-        </div>
+      <div className="App" style={{ backgroundImage:`url(${bg})` }} >
+        <Header  teams={this.state.teams} totalTeams={this.state.totalTeams} onTeamsChange={this.handleTeamsChange}/>
+       
         <div className="content">
           {content}
         </div>
-        <Footer/>
+
+        <div className="footer tabs">
+          {tabs}
+        </div>
+       
       </div>
     );
   }

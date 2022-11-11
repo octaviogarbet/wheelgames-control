@@ -1,28 +1,37 @@
 .tab {
   cursor: pointer;
-  background-color: var(--color-header);;
   width: 100%;
   height: 100%;
+  border-left: 1px solid #336aa3;
+  border-right: 1px solid #031d39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
+
   &:hover {
-    filter: brightness(90%);
+    filter: brightness(98%);
   }
   &.selected {
-    background-color: var(--color-container);
+    background: linear-gradient(#0085ff, #003c73);
     // border-bottom: 1px solid var(--color-primary);
-    font-weight: bold;
   }
   .score-correct {
-    color: var(--color-correct);
-    font-size: 1.5em;
+    color: #30d354;
+    font-size: 1.9em;
   }
 
   .score-wrong {
-    color: var(--color-wrong);
-    font-size: 1.5em;
+    color: #fc5959;
+    font-size: 1.9em;
   }
 
   .team-name {
-    color: var(--color-primary);
+    color: white;
+    font-weight: bold;
     font-size: 1.5em;
+    text-transform: uppercase;
+    display: block;
   }
 }

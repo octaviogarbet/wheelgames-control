@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   &.hidden {
     display: none;
@@ -8,11 +8,17 @@
 }
 
 .wheel-container {
-  padding: 10px 40px;
+  display: flex;
+  padding: 0 60px 20px;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .game-pad {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  min-height: 100%;
+  width: 433px;
 }
