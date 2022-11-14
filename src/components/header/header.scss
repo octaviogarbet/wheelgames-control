@@ -19,7 +19,30 @@ header {
   width: 276px;
   margin-right: 20px;
   border-bottom: 3px solid #d9d9d9;
-  .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root,
+  .css-i44wyl {
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .css-u9osun,
+  .css-u9osun.Mui-focused {
+    color: #ffe600;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: -16px;
+  }
+  .css-igs3ac {
+    border: none;
+  }
+  .css-1x5jdmq {
+    padding: 16.5px 0;
+  }
+
+  //estilos para input version local
+
+  /* .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root,
   .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     color: #ffe600;
     text-transform: uppercase;
@@ -27,6 +50,7 @@ header {
     font-size: 1.2rem;
     margin-left: -16px;
   }
+
   .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
     color: white;
     font-size: 1.3rem;
@@ -39,5 +63,5 @@ header {
     .MuiOutlinedInput-notchedOutline {
     border-radius: 0;
     border: none;
-  }
+  } */
 }
