@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wheelgames-control/static/css/main.0a5acfb1.css",
+    "main.css": "/wheelgames-control/static/css/main.de1ce65c.css",
     "main.js": "/wheelgames-control/static/js/main.3649b103.js",
     "static/media/bg.png": "/wheelgames-control/static/media/bg.33e8ab7caa87fce006dd.png",
     "static/media/logo.svg": "/wheelgames-control/static/media/logo.8f335ed8dd843567098a7f65d9b77e6c.svg",
     "static/media/sprite.svg": "/wheelgames-control/static/media/sprite.d2627e044a46e87115dfd8394137d348.svg",
     "static/media/wheelbg.svg": "/wheelgames-control/static/media/wheelbg.0b602310b03305ced9e8127ed2a21b68.svg",
     "index.html": "/wheelgames-control/index.html",
-    "main.0a5acfb1.css.map": "/wheelgames-control/static/css/main.0a5acfb1.css.map",
+    "main.de1ce65c.css.map": "/wheelgames-control/static/css/main.de1ce65c.css.map",
     "main.3649b103.js.map": "/wheelgames-control/static/js/main.3649b103.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a5acfb1.css",
+    "static/css/main.de1ce65c.css",
     "static/js/main.3649b103.js"
   ]
 }
