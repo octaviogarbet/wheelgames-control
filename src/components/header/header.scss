@@ -1,14 +1,43 @@
 header {
-  min-height: 15vh;
   display: flex;
-  justify-content: space-around;
-  background-color: var(--color-header);
+  justify-content: space-between;
+  padding: 20px 60px;
   align-items: center;
 }
 
 .heading {
-  flex-grow: 0.5;
+  display: flex;
   h1 {
-    color: var(--color-primary);
+    color: #4effff;
+  }
+  img {
+    width: 70%;
+  }
+}
+
+.options {
+  width: 276px;
+  margin-right: 20px;
+  border-bottom: 3px solid #d9d9d9;
+  .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root,
+  .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: #ffe600;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: -16px;
+  }
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 16px 0;
+    width: 279px;
+  }
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline,
+  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover
+    .MuiOutlinedInput-notchedOutline {
+    border-radius: 0;
+    border: none;
   }
 }

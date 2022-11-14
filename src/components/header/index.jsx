@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './header.scss';
 import TextField from '@mui/material/TextField';
+import logo from '../../assets/logo.svg';
 
 class Header extends Component {
   handleChange = (event) => {
@@ -12,7 +13,7 @@ class Header extends Component {
     return (
     <header>
       <div className="heading">
-        <h1>{label}</h1>
+      <img alt="PasaPalabra" src={logo}/>
       </div>
       <div className="options">
          <TextField type="number" label="Teams (1 to 4)" value={totalTeams} onChange={this.handleChange} name="teams" id="teams" min="1" max="4" step="1"/>

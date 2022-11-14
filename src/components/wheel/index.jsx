@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Letter from '../letter';
 import './wheel.scss';
+import wheelbg from '../../assets/wheelbg.svg'
 
 class Wheel extends Component {
 
@@ -16,9 +17,11 @@ class Wheel extends Component {
 
     );
     return (
+      <div class="circle-area"  style={{ backgroundImage:`url(${wheelbg})` }}>
       <ul className='circle-container'>
         {listItems}
       </ul>
+      </div>
     );
   }
 }

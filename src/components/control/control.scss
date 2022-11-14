@@ -1,11 +1,10 @@
 .control-pannel {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 13rem;
+  justify-content: space-between;
+  max-width: 286px;
   .button {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     border: none;
     color: white;
     padding: 20px;
@@ -13,12 +12,100 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px 0;
     border-radius: 12px;
     cursor: pointer;
+    width: 132px;
+    height: 122px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+    &.pasapalabra {
+      background: linear-gradient(#ffb342, #e7651c);
+      width: 313px;
+      font-size: 2rem;
+      text-shadow: 0 2px 1px #b9751b;
+      font-weight: bold;
+      height: 98px;
+      &:hover {
+        animation: glow1 0.5s ease infinite;
+      }
+      @keyframes glow1 {
+        0% {
+          box-shadow: 0 0 4px 0 #ffe600;
+        }
+
+        50% {
+          box-shadow: 0 0 10px 0 #ffe600;
+        }
+
+        100% {
+          box-shadow: 0 0 4px 0 #ffe600;
+        }
+      }
+    }
+
+    &.correct {
+      background: linear-gradient(#48bd5b, #1f8235);
+      &:hover {
+        animation: glow2 0.5s ease infinite;
+      }
+      @keyframes glow2 {
+        0% {
+          box-shadow: 0 0 4px 0 #64ffa4;
+        }
+
+        50% {
+          box-shadow: 0 0 10px 0 #64ffa4;
+        }
+
+        100% {
+          box-shadow: 0 0 4px 0 #64ffa4;
+        }
+      }
+    }
+    &.wrong {
+      background: linear-gradient(#f0404a, #be2121);
+      &:hover {
+        animation: glow3 0.5s ease infinite;
+      }
+      @keyframes glow3 {
+        0% {
+          box-shadow: 0 0 4px 2px #ff8181;
+        }
+
+        50% {
+          box-shadow: 0 0 10px 2px#ff8181;
+        }
+
+        100% {
+          box-shadow: 0 0 4px 2px #ff8181;
+        }
+      }
+    }
+    &.action {
+      background: linear-gradient(#3da6f1, #2b79ee);
+      &:hover {
+        animation: glow4 0.5s ease infinite;
+        @keyframes glow4 {
+          0% {
+            box-shadow: 0 0 4px 2px #81ecff;
+          }
+
+          50% {
+            box-shadow: 0 0 10px 2px#81ecff;
+          }
+
+          100% {
+            box-shadow: 0 0 4px 2px #81ecff;
+          }
+        }
+      }
+    }
+
     svg {
-      height: 2rem;
-      width: 2rem;
+      height: 3.5rem;
+      width: 3.5rem;
+      fill: white;
+      filter: drop-shadow(0 -2px 0 rgb(0 0 0 / 0.4));
     }
   }
 }
