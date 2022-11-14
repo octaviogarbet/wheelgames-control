@@ -33,12 +33,12 @@
   }
 }
 .circle-area {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 25px;
   padding: 20px 60px;
   width: 100%;
   background-position: center;
-  background-size: 99%;
+  background-size: 114%;
 }
 .circle-container {
   @include on-circle($item-count: 26, $circle-size: 25em, $item-size: 2.5em);
